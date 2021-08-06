@@ -1,0 +1,44 @@
+{
+  "name": "wdio-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/wdio wdio.conf.js",
+    "pretty-quick": "pretty-quick"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaiaDimitrova/WebdriverIO_POC.git"
+  },
+  "keywords": [
+    "automation",
+    "testing",
+    "wdio"
+  ],
+  "author": "Taia Dimitrova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TaiaDimitrova/WebdriverIO_POC/issues"
+  },
+  "homepage": "https://github.com/TaiaDimitrova/WebdriverIO_POC#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/register": "^7.14.5",
+    "@wdio/cli": "^7.9.0",
+    "@wdio/local-runner": "^7.9.0",
+    "@wdio/mocha-framework": "^7.9.0",
+    "@wdio/spec-reporter": "^7.9.0",
+    "chromedriver": "^92.0.1",
+    "husky": "^7.0.1",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "wdio-chromedriver-service": "^7.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
