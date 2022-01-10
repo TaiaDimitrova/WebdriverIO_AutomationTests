@@ -1,11 +1,5 @@
 name: ignis-automation-debugging-$(SourceBranchName)-$(Date:yyyyMMdd)$(Rev:.r)
 
-resources:
-  repositories:
-    - repository: WebdriverIO_AutomationTests
-      type: git
-      name: ignis-automation-testing-e2e
-
 jobs:
   - job: Install
     pool:
