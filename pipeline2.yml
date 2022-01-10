@@ -1,0 +1,18 @@
+name: ignis-automation-debugging-$(SourceBranchName)-$(Date:yyyyMMdd)$(Rev:.r)
+
+jobs:
+  - job: RUN
+    pool:
+      vmImage: 'ubuntu-latest'
+
+    steps:
+      - checkout: self
+
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '14.x'
+        displayName: 'Install Node.js'
+
+      - bash: |
+          npm install
+        displayName: Npm install
