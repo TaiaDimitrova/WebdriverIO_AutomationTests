@@ -12,31 +12,29 @@ jobs:
       vmImage: 'windows-latest'
 
     steps:
-      steps:
-        - checkout: self
+      - checkout: self
 
-        - task: NodeTool@0
-          inputs:
-            versionSpec: '14.x'
-          displayName: 'Install Node.js'
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '14.x'
+        displayName: 'Install Node.js'
 
-        - bash: |
-            npm install
-          displayName: Npm install
+      - bash: |
+          npm install
+        displayName: Npm install
 
   - job: RUN
     pool:
       vmImage: 'ubuntu-latest'
 
     steps:
-      steps:
-        - checkout: self
+      - checkout: self
 
-        - task: NodeTool@0
-          inputs:
-            versionSpec: '14.x'
-          displayName: 'Install Node.js'
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '14.x'
+        displayName: 'Install Node.js'
 
-        - bash: |
-            npm install
-          displayName: Npm install
+      - bash: |
+          npm install
+        displayName: Npm install
