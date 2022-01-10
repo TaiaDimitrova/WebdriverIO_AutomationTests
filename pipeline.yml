@@ -24,7 +24,6 @@ jobs:
             npm install
           displayName: Npm install
 
-jobs:
   - job: RUN
     pool:
       vmImage: 'ubuntu-latest'
